@@ -5,6 +5,7 @@ import requests
 from flask import Flask, request
 
 app = Flask(__name__)
+app.config["JSON_SORT_KEYS"] = False
 
 
 def xml_response(x, y, addr):
@@ -88,4 +89,3 @@ def addr_details():
 if __name__ == "__main__":
     
     app.run()
-
